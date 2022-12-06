@@ -2,10 +2,13 @@ import { Box, Button, IconButton } from "@material-ui/core";
 import { FiCamera } from "react-icons/fi";
 import React from "react";
 
+
+
+
 const Day6 = () => {
   return (
     <div>
-      <Box
+      <Box //包装组件来使用
         display="flex"
         justifyContent="space-around"
         alignItems="center"
@@ -30,6 +33,7 @@ const Day6 = () => {
         </Button>
       </Box>
       <Box>
+        {/* 上傳檔案的部分可以用 label 替代 , 我地計設個button replace 佢 */}
         <input
           accept="image/*"
           style={{ display: "none" }}
@@ -37,6 +41,7 @@ const Day6 = () => {
           multiple
           type="file"
         />
+        {/*  我地計設個button replace for 上傳檔案 */}
         <label htmlFor="contained-button-file">
           <Button variant="contained" color="primary" component="span">
             Upload
@@ -57,6 +62,8 @@ const Day6 = () => {
             <FiCamera />
           </IconButton>
         </label>
+       
+     
       </Box>
     </div>
   );
